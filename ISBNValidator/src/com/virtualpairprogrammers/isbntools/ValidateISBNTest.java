@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class ValidateISBNTest {
 
 	@Test
-	public void test() {
+	void test() {
 		fail("Not yet implemented");
 	}
 
