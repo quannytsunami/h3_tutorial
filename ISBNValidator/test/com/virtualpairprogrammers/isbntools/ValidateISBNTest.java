@@ -8,23 +8,23 @@ import org.junit.jupiter.api.Test;
 
 class ValidateISBNTest {
 
-	@Test
-	public void checkAValidISBN() {
-		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN("0140449116");
-		assertTrue("first result", result);
-		result = validator.checkISBN("0140177396");
-		assertTrue("second result", result);
-	}
-	
-
-	@Test
-	public void checkAnInvalidISBN() {
-		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN("0140449117");
-		assertFalse(result);
-	}
-	
+//	@Test
+//	public void checkAValidISBN() {
+//		ValidateISBN validator = new ValidateISBN();
+//		boolean result = validator.checkISBN("0140449116");
+//		assertTrue("first result", result);
+//		result = validator.checkISBN("0140177396");
+//		assertTrue("second result", result);
+//	}
+//	
+//
+//	@Test
+//	public void checkAnInvalidISBN() {
+//		ValidateISBN validator = new ValidateISBN();
+//		boolean result = validator.checkISBN("0140449117");
+//		assertFalse(result);
+//	}
+//	
 //	@Test(expected = NumberFormatException.class)
 //	public void nineDigitISBNsAreNotAllowed() {
 //		ValidateISBN validator = new ValidateISBN();
@@ -33,9 +33,9 @@ class ValidateISBNTest {
 	
 	@Test 
 	public void nonNumericISBNsAreNotAllowed() {
-		fail();
-//		ValidateISBN validator = new ValidateISBN();
-//		Assertions.assertThrows(NumberFormatException.class, () -> validator.checkISBN("helloworld"));
+//		fail();
+		ValidateISBN validator = new ValidateISBN();
+		Assertions.assertThrows(NumberFormatException.class, () -> validator.checkISBN("helloworld"));
 	}
 
 
