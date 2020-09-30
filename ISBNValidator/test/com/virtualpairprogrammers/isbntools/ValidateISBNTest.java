@@ -16,7 +16,13 @@ class ValidateISBNTest {
 //		result = validator.checkISBN("0140177396");
 //		assertTrue("second result", result);
 //	}
-//	
+	
+	@Test
+	public void checkAValid13DigitISBN() {
+		ValidateISBN validator = new ValidateISBN();
+		boolean result = validator.checkISBN("9781853260087");
+		assertTrue(result);
+	}
 //
 //	@Test
 //	public void checkAnInvalidISBN() {
@@ -25,18 +31,24 @@ class ValidateISBNTest {
 //		assertFalse(result);
 //	}
 //	
+//	@Test
+//	public void ISBNNumbersEndingInAXAreValid() {
+//		ValidateISBN validator = new ValidateISBN();
+//		boolean result = validator.checkISBN("012000030X");
+//		assertTrue(result);
+//	}
+//	
 //	@Test(expected = NumberFormatException.class)
 //	public void nineDigitISBNsAreNotAllowed() {
 //		ValidateISBN validator = new ValidateISBN();
 //		validator.checkISBN("123456789");
 //	}
-	
-	@Test 
-	public void nonNumericISBNsAreNotAllowed() {
-//		fail();
-		ValidateISBN validator = new ValidateISBN();
-		Assertions.assertThrows(NumberFormatException.class, () -> validator.checkISBN("helloworld"));
-	}
-
+//	
+//	@Test 
+//	public void nonNumericISBNsAreNotAllowed() {
+//
+//		ValidateISBN validator = new ValidateISBN();
+//		Assertions.assertThrows(NumberFormatException.class, () -> validator.checkISBN("helloworld"));
+//	}
 
 }
